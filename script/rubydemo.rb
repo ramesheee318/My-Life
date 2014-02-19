@@ -1,0 +1,3 @@
+
+gets("hello world".upcase)
+
