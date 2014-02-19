@@ -9,7 +9,7 @@ class Encryption
   def self.local_file
     remote_host = '192.168.10.12'
     remote_user = 'code'
-    remote_pass = 'code@kreatio'
+    remote_pass = 'code@ramesh'
     version = '1.9.3'
     ##############Local server deatils############################################
     user_folder_name = ("#{Rails.root}").split('/')[2]

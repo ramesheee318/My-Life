@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TMP_DIR=`mktemp -d --suffix=kreatio` || exit 1
+TMP_DIR=`mktemp -d --suffix=ramesh` || exit 1
 
 echo $TMP_DIR
 

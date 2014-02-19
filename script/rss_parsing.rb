@@ -72,7 +72,7 @@ puts "#{title.content}"
         author =   Author.new()
         author.firstname = options[:author_name]
         author.lastname = options[:author_name]
-        author.email = options[:author_name] + "@kreatio.com"
+        author.email = options[:author_name] + "@ramesh.com"
         author.sites = [@site]
         
         puts "Author -->#{author.id}" if author.save(false)

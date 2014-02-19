@@ -331,12 +331,12 @@ end
 
     # RunArticleMigration
   def self.parse_importforcoverdata
-    ImportForCoverData.migrate("/home/kreatio1/Demo/Client/Cybermedia/cybermedia_stg/migreation/Demo/2012-06-13/ARTICLES/XML",
+    ImportForCoverData.migrate("/home/ramesh1/Demo/Client/Cybermedia/cybermedia_stg/migreation/Demo/2012-06-13/ARTICLES/XML",
     { :check_old_articles=>true,
-      :imageset_binary_path=>["/home/kreatio1/Demo/Client/Cybermedia/cybermedia_stg/migreation/Demo/2012-06-13/ARTICLES"],
-      :video_binary_path=>["/home/kreatio1/Demo/Client/Cybermedia/cybermedia_stg/migreation/Demo/2012-06-13/ARTICLES"],
-      :inline_asset_path =>{"/IMG"=>"/home/kreatio1/Demo/Client/Cybermedia/cybermedia_stg/migreation/Demo/2012-06-13/ARTICLES/IMG"},
-      :site_short_name=>"kreatio",
+      :imageset_binary_path=>["/home/ramesh1/Demo/Client/Cybermedia/cybermedia_stg/migreation/Demo/2012-06-13/ARTICLES"],
+      :video_binary_path=>["/home/ramesh1/Demo/Client/Cybermedia/cybermedia_stg/migreation/Demo/2012-06-13/ARTICLES"],
+      :inline_asset_path =>{"/IMG"=>"/home/ramesh1/Demo/Client/Cybermedia/cybermedia_stg/migreation/Demo/2012-06-13/ARTICLES/IMG"},
+      :site_short_name=>"ramesh",
       :site_based_category_flag=>false,
       :asset_flag=>true,
       :old_url_mapping=>true

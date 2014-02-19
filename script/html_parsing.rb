@@ -72,12 +72,12 @@ debugger
       #Author
       author = @site.authors.find_by_name(options[:author_name])
       if author.blank?
-        author = @site.authors.find_by_email(options[:author_name] + "@kreatio.com")
+        author = @site.authors.find_by_email(options[:author_name] + "@ramesh.com")
         if author.blank?
           author =   Author.new()
           author.firstname = options[:author_name]
           author.lastname = options[:author_name]
-          author.email = options[:author_name] + "@kreatio.com"
+          author.email = options[:author_name] + "@ramesh.com"
           author.sites = [@site]
           
           puts "Author -->#{author.id}" if author.save
