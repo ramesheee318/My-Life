@@ -3,12 +3,12 @@ require 'ruby-debug'
 require 'mail'
 require 'fileutils'
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
-imap = Net::IMAP.new('mail.kreatio.com',993,true)
+imap = Net::IMAP.new('mail.ramesh.com',993,true)
 imap.login('youremailaddress', 'your email password')
 imap.select('Inbox')
 # All msgs in a folder
 #msgs = imap.search(["SINCE", "1-Jan-1969"])
-msgs = imap.search(['FROM','where you get the mail sender address email(neetinkumar@kreatio.com)','UNSEEN'])
+msgs = imap.search(['FROM','where you get the mail sender address email(neetinkumar@ramesh.com)','UNSEEN'])
 # Read each message
 msgs.each do |msgID|
 #debugger
@@ -36,7 +36,7 @@ body1 = imap.fetch(msgID, "RFC822")[0].attr["RFC822"]
 	puts "#{@doc_file} ---> orginal file name-->#{@orginal_file_name}"
 #`cd /home/test/doc_to_html_new`
 #`sh #{Rails.root}/docx_to_html/docx2xhtml.sh #{@doc_file}`
-	TMP_DIR=`mktemp -d --suffix=kreatio` #|| exit 1
+	TMP_DIR=`mktemp -d --suffix=ramesh` #|| exit 1
 	puts TMP_DIR
 	`unzip "#{@doc_file}" -d #{TMP_DIR} >/dev/null`
 	`cp #{Rails.root}/docx_to_html/kr-docx2html.xslt #{TMP_DIR}`

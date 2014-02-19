@@ -1,4 +1,4 @@
-["ramvel14@gmail.com","ashokhbharggav@gmail.com","nalinibs60@hotmail.com","test@insideoutside.in","lmiyer@hotmail.com","adhirajkumar@kreatio.com","ashokhb@insideoutside.in","1234576@gmail.com","deva@gmail.com","jenorish987@gmail.com","jenorishssdf987@gmail.com","jenorishkingston@gmail.com","jenorish1233242453@gmail.com","jenorish@gmail.com"].each do | each_do |
+["ramvel14@gmail.com","ashokhbharggav@gmail.com","nalinibs60@hotmail.com","test@insideoutside.in","lmiyer@hotmail.com","adhirajkumar@ramesh.com","ashokhb@insideoutside.in","1234576@gmail.com","deva@gmail.com","jenorish987@gmail.com","jenorishssdf987@gmail.com","jenorishkingston@gmail.com","jenorish1233242453@gmail.com","jenorish@gmail.com"].each do | each_do |
 @sub = Subscriber.all.collect{|aa| aa  if aa.created_at.strftime("%Y-%m-%d") == "2012-11-23"}.compact.collect{|a| a if a.email_id == "#{each_do}" }.compact.first
 @author = Author.find(:first,:conditions =>["subscriber_id =? and created_at >=? and created_at<=?",@sub.id,"2012-11-23 00:00:00","2012-11-23 23:00:00"])
 if !@author.blank?

@@ -6,7 +6,7 @@ require 'nokogiri'
 class WordDocx
 
  def self.argument_define_portion
- client_dir = "/home/kreatio/IT/"  
+ client_dir = "/home/ramesh/IT/"  
  params = { :site_short_name => "itnext",:sectionname => "TBD",:draft_flag => true }
   logger = Logger.new("#{Rails.root}/log/#{params[:site_short_name]}_#{Date.today.to_s}_worddocx.log")
  initial_process( client_dir,params,logger )

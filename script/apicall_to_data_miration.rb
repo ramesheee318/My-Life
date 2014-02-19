@@ -6,21 +6,21 @@ class ApicallToDataMiration
   
   
  def self.export
-    SeperateExportScript.generate_xml(Site.find_by_name("staging-itnext.kreatio.com"),
+    SeperateExportScript.generate_xml(Site.find_by_name("staging-itnext.ramesh.com"),
     params = { :menus => "menus"   , :sources => "sources"  , :sections => "sections"  , :properties => "properties"  , :categories => "categories"  , :pages => "pages"  , :data_lists => "data_lists"  , :authors => "authors"  ,  :containers => "containers"  ,  :ranklists => "ranklists" },
     "Api_Export")
 
   end
 
  def self.article_export
-    ActualDataExport.generate_xml(Site.find_by_name("staging-itnext.kreatio.com"),
+    ActualDataExport.generate_xml(Site.find_by_name("staging-itnext.ramesh.com"),
     params = {:action => "export_entire_data" },
     "Api_Data_Export")
   end
 
  
  def self.import
-    SeperateImportScript.create(Site.find_by_name("demo-krmedia.kreatio.com"),
+    SeperateImportScript.create(Site.find_by_name("demo-krmedia.ramesh.com"),
     params = { :ranklists => "ranklists" },
     #:menus => "menus"   , :sources => "sources"  , :sections => "sections"  , :properties => "properties"  , :categories => "categories"  , :pages => "pages"  , :data_lists => "data_lists"  , :authors => "authors"  ,  :containers => "containers"  ,  :ranklists => "ranklists" },
     "Api_Export")
@@ -43,7 +43,7 @@ class ApicallToDataMiration
 
 
 
-# rails r ApicallToDataMiration.process_of_articleexport_to_ftpserver\(\"kreatio_demo\",\"192.168.47.200\",\"ftpuser\",\"ftpuser123\"\)
+# rails r ApicallToDataMiration.process_of_articleexport_to_ftpserver\(\"ramesh_demo\",\"192.168.47.200\",\"ftpuser\",\"ftpuser123\"\)
   def self.process_of_articleexport_to_ftpserver(short_name, ip, user, password)
     logger = Logger.new("#{Rails.root}/log/#{short_name}_daily_export.log")
     logger.info("#{short_name} :)--> Process starting time: #{Time.now.strftime("%d-%m-%Y %H:%M:%S")}")
@@ -66,7 +66,7 @@ class ApicallToDataMiration
   end
   
 
-# rails r ApicallToDataMiration.process_of_articleimport_from_ftpserver\(\"kreatio_demo\",\"2013-08-20\",\"192.168.47.200\",\"ftpuser\",\"ftpuser123\"\)
+# rails r ApicallToDataMiration.process_of_articleimport_from_ftpserver\(\"ramesh_demo\",\"2013-08-20\",\"192.168.47.200\",\"ftpuser\",\"ftpuser123\"\)
     def self.process_of_articleimport_from_ftpserver(short_name,date, ip, user, password)
     #Dowload FTP
     local_dir  = ( FileUtils.mkdir_p "#{Rails.root}/public/DataImport/#{short_name}/" ).first

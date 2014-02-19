@@ -83,7 +83,7 @@ end
     if author.blank?
       author =   Author.new()
       author.firstname = "admin"
-      author.lastname = "kreatio"
+      author.lastname = "ramesh"
       author.email = options[:author_email]
       author.save(:validate => false)
       site.author_ids =  site.author_ids + [author.id]

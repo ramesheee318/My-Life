@@ -92,8 +92,8 @@ for site in sites
     set_all_site_properties_disable(@site) 
 end
 report_file_path = "#{RAILS_ROOT}/tmp/site_homepage_performace_report_#{Time.now.strftime('%d-%m-%Y')}.xls"
- SentMail.deliver_file("infrastructure@kreatio.com",["neetinkumar@kreatio.com","pankaj@kreatio.com","senthilkumar@kreatio.com","dipti@kreatio.com"],report_file_path)
-#SentMail.deliver_file("infrastructure@kreatio.com",["neetinkumar@kreatio.com"],report_file_path)
+ SentMail.deliver_file("infrastructure@ramesh.com",["neetinkumar@ramesh.com","pankaj@ramesh.com","senthilkumar@ramesh.com","dipti@ramesh.com"],report_file_path)
+#SentMail.deliver_file("infrastructure@ramesh.com",["neetinkumar@ramesh.com"],report_file_path)
 
 end
 #/etc/init.d/unicorn_performance stop wps_per
